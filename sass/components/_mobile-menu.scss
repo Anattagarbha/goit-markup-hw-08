@@ -1,0 +1,111 @@
+.mobile-open-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-left:auto;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    &:hover, &:focus {
+        fill: $brand-color;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include desktop {
+        display: none;
+    } 
+    &--color-trans {
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: var(--trans-timing);
+    }
+}
+
+.mobile-menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    padding: 10px 15px 48px 40px;
+    background-color: $bgn-color;
+    transform: translateX(0);
+    transition: opacity 250ms $trans-timing, 
+    visibility 250ms $trans-timing;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        overflow: auto;
+        transform: translateX(0);
+        transition: transform 250ms $trans-timing;
+    }
+    &__close-btn {
+        display: block;
+        margin-left: auto;
+        padding: 0 15px;
+        border: none;
+        background-color: transparent;
+        transition: fill 250ms $trans-timing;
+        cursor: pointer;
+        &:hover, &:focus {
+            fill: $brand-color;
+        }
+    }
+    &__item {
+        @include font(40, 47, 500, 0.02);
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+    &__link {
+        color: $font-color;
+        &--current {
+            color: $brand-color;
+        }
+        &:hover, &:focus {
+            color: $brand-color;
+        }
+        &--color-trans {
+            transition-property: color;
+            transition-duration: 250ms;
+            transition-timing-function: $trans-timing;
+        }
+    }
+    &__contacts-link {
+        &-tel {
+            @include font(34, 40, 500, 0.02);
+            color: $brand-color;
+            display: inline-block;
+            margin-bottom: 32px;
+        }
+        &-mail {
+            @include font(24, 28, 500, 0.02);
+            display: inline-block;
+            margin-bottom: 64px;
+            color: $small-text;
+        }
+    }
+    &__social-list {
+        display: flex;
+        gap: 5px;
+    }
+    &__social-item {
+        &:not(:last-child) {
+            padding-right: 10px;
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }
+        &:not(:first-child) {
+            padding-left: 4px;
+        }
+        
+    }
+    &__social-link {
+        @include font(18, 22, 500, 0.02);
+        color: $brand-color;
+        display: inline-block;
+    }
+}
