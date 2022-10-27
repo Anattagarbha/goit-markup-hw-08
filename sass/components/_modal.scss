@@ -53,6 +53,7 @@
         justify-content: center;
         align-items: center;
         transition: fill 250ms $trans-timing;
+        cursor: pointer;
         &:hover {
             fill: $brand-color;
         }
