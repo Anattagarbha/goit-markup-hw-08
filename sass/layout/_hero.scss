@@ -10,13 +10,18 @@
 
 .hero {
     &__headline {
-        @include font(44, 60, 900, 0.03);
+        @include font(26, 42, 900, 0.06);
         text-transform: uppercase;
-        width: 696px;
-        margin-bottom: 30px;
+        color:$mr-white;
         margin-left: auto;
         margin-right: auto;
-        color:$mr-white;
+        margin-bottom: 30px;
+        max-width: 360px;
+        min-width: min-content;
+        @include desktop {
+            @include font(44, 60, 900, 0.03);
+            min-width: 696px;
+        }
     }
     &__hero-bgn {
         max-width: 1600px;
