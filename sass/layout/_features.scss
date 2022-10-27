@@ -1,7 +1,4 @@
-.features.section {
-    padding-bottom: 0;
-  }
-  .features {
+.features {
     &__title {
         @include font(14, 16, 700, 0.03);
         text-transform: uppercase;
@@ -17,8 +14,13 @@
         justify-content: space-between;
     }
     &__item {
-        max-width: 270px;
-        flex-basis: 270px;
+        width: 100%;
+        @include tablet {
+            width: calc((100% - 30px) / 2);
+        }
+        @include desktop {
+            width: calc((100% - 90px) / 4);
+        }
     }
     &__item::before {
         content: "";
