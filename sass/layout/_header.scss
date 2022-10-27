@@ -18,8 +18,17 @@
     display: flex;
     align-items: center;
     &__nav-items {
-        display: flex;
-        gap: 50px;
+        display: none;
+        @include tablet {
+            display: flex;
+            gap: 50px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @include desktop {
+            display: flex;
+            gap: 50px;
+        }        
     }
     &__nav-link {
         color: $font-color;
