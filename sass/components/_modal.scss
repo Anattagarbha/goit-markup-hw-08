@@ -64,7 +64,7 @@
         margin-bottom: 12px;
         @include desktop {
           @include font(20, 23, 700, 0.03);
-      }
+        }
       }
       &__label {
         @include font(12, 14, 400, 0.01);
@@ -127,10 +127,13 @@
         margin-bottom: 30px;
       }
       &__checkbox-label {
-        @include font(14, 24, 400, 0.03);
+        @include font(12, 14, null, 0.03);
         display: flex;
         align-items: center;
         color: $small-text;
+        @include desktop {
+          @include font(14, 24, 400, 0.03);
+        }
       }
       &__checkbox-label span {
         width: 16px;
