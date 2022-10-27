@@ -1,9 +1,24 @@
 .footer {
     background-color: $third-bgn-color;
     padding: 60px 0;
-    > .container {
+    &__container {
         display: flex;
-        align-items: baseline;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 60px;
+        column-gap: 165px;
+        @include desktop {
+            justify-content: left;
+            gap: 0;
+            align-items: baseline;
+        }
+    }
+    &__wrap {
+        text-align: center;
+        min-width: 232px;
+        @include desktop {
+            text-align: left;
+        }
     }
     &__address-link {
         @include font(14, 24, 400, 0.03);
