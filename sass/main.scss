@@ -1,12 +1,12 @@
-@import './base/reset';
 @import './utils/vars';
+@import './base/reset';
+@import './utils/mixins';
 @import './base/globals';
 @import './components/container';
 @import './components/section';
 @import './utils/hidden';
 @import './layout/header';
 @import './components/logo';
-@import './utils/mixins';
 @import './layout/hero';
 @import './components/headline';
 @import './components/button';
