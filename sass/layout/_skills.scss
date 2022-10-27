@@ -3,7 +3,12 @@
 }
 
 .skills {
+    display: none;
+    @include desktop {
+        display: block;
+    }
     &__headline {
+        
         @extend %headline;
     }
     &__list {
