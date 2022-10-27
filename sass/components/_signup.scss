@@ -7,6 +7,16 @@
         justify-content: left;
         margin-left: 93px;
     }
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        @include desktop {
+            gap: 12px;
+            flex-wrap: nowrap;
+        } 
+    }
     &__title {
         @include font(14, 16, 700, 0.03);
         text-transform: uppercase;
