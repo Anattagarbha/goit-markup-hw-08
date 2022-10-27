@@ -20,6 +20,13 @@
             text-align: left;
         }
     }
+    &__address-item {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+            @include desktop {
+                margin-bottom: 9px;
+            }
+        }
     &__address-link {
         @include font(14, 24, 400, 0.03);
         font-style: normal;
@@ -32,11 +39,6 @@
     }
     &--white-link {
         color: $mr-white;
-    }
-    &__address-item {
-        &:not(:last-child) {
-            margin-bottom: 9px;
-        }
     }
     &--color-trans {
         transition-property: color;
@@ -81,4 +83,5 @@
         transition-duration: 250ms;
         transition-timing-function: $trans-timing;
     }
+}
 }
