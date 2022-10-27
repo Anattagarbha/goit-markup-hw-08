@@ -28,7 +28,13 @@
         }
     }
     &__input {
-        width: 358px;
+        width: 100%;
+        @include mobile {
+            width: 450px;
+        }
+        @include desktop {
+            width: 358px;
+        }
         color: $input-text-color;
         background-color: inherit;
         outline: transparent;
