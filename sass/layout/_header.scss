@@ -76,6 +76,30 @@
         flex-direction: row;
         column-gap: 30px;
     }
+    &__icon {
+        fill: currentColor;
+        margin-right: 10px;
+        &--mail {
+            @include tablet {
+                width: 14px;
+                height: 10px;
+            }
+            @include desktop {
+                width: 16px;
+                height: 12px;
+            }
+        }
+        &--tel {
+            @include tablet {
+                width: 10px;
+                height: 14px;
+            }
+            @include desktop {
+                width: 10px;
+                height: 16px;
+            }
+        }    
+    }
     &__link {
         display: flex;
         align-items: center;
