@@ -32,7 +32,27 @@
         background-position: center;
         background-size: cover;
         background-image: linear-gradient($hero-gdn-color, 
+        $hero-gdn-color), url("../images/decor/hero_mob_1x.jpg");
+        @include retina {
+            background-image: linear-gradient($hero-gdn-color, 
+        $hero-gdn-color), url("../images/decor/hero_mob_2x.jpg");
+        }
+        @include tablet {
+            background-image: linear-gradient($hero-gdn-color, 
+        $hero-gdn-color), url("../images/decor/hero_tab_1x.jpg");
+        @include retina {
+            background-image: linear-gradient($hero-gdn-color, 
+        $hero-gdn-color), url("../images/decor/hero_tab_2x.jpg");
+        }
+        }
+        @include desktop {
+            background-image: linear-gradient($hero-gdn-color, 
         $hero-gdn-color), url("../images/decor/hero.jpg");
+        @include retina {
+            background-image: linear-gradient($hero-gdn-color, 
+        $hero-gdn-color), url("../images/decor/hero_2x.jpg");
+        }
+        }
     }
     &__button {
         @extend %button;
