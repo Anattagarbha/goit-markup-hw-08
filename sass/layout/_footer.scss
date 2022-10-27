@@ -53,8 +53,12 @@
     &__social-headline {
         @include font (14, 16, 700, 0.03);
         text-transform: uppercase;
+        text-align: center;
         color: $mr-white;
         margin-bottom: 20px;
+        @include desktop {
+            text-align: left;
+        }
     }
     &__social-list {
         display: flex;
