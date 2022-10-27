@@ -1,3 +1,7 @@
+.skills.section {
+    padding-top: 0;
+}
+
 .skills {
     &__headline {
         @extend %headline;
