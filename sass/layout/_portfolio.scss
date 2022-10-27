@@ -12,9 +12,18 @@
     }
     &__filter {
         display: flex;
-        justify-content: center;
-        margin-bottom: 50px;
+        flex-wrap: wrap;
+        justify-content: left;
         gap: 8px;
+        margin-bottom: 40px;
+        @include tablet {
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        @include desktop {
+            justify-content: center;
+            margin-bottom: 50px;
+        }
     }
     &__projects {
         display: flex;
