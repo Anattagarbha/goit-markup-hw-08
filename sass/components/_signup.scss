@@ -22,6 +22,10 @@
         text-transform: uppercase;
         color: $mr-white;
         margin-bottom: 20px;
+        text-align: center;
+        @include desktop {
+            text-align: left;
+        }
     }
     &__input {
         width: 358px;
