@@ -10,10 +10,21 @@
         display: flex;
         gap: 30px;
         width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     &__item {
-        width: calc((100% - 150px + 12px) / 6);
         display: flex;
+        justify-content: center;
+        @include mobile {
+            width: calc((100% - 30px) / 2);
+        }
+        @include tablet {
+            width: calc((100% - 60px) / 3);
+        }
+        @include desktop {
+            width: calc((100% - 150px) / 6);
+        }
     }
     &__link {
         width: calc(100%);
