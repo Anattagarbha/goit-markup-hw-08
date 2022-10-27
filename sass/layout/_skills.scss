@@ -7,9 +7,12 @@
     @include desktop {
         display: block;
     }
-    &__headline {
-        
+    &__headline { 
         @extend %headline;
+        @include desktop {
+            @include font(36, 42, 700, 0.03);
+            margin-bottom: 50px; 
+        }
     }
     &__list {
         display: flex;
