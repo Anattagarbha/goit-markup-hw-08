@@ -1,0 +1,57 @@
+.team {
+    background-color: $second-bgn-color;
+    &__headline {
+        @extend %headline;
+    }
+    &__member {
+        box-shadow: 0px 1px 3px $multi-shadow-a,
+        0px 1px 1px $multi-shadow-b, 0px 2px 1px $multi-shadow-c;
+        background-color: $mr-white;
+        max-width: 270px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    &__member-info {
+        padding: 30px 0;
+    }
+    &__member-name {
+        @include font(16, 19, 500, 0.03);
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    &__member-function {
+        @include font(16, 19, 400, 0.03);
+        color: $small-text;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    &__social-list {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: inherit;
+        fill: $icon-fill-color;
+        &:hover, &:focus {
+            fill: $bgn-color;
+            background-color: $brand-color;
+        }
+    }
+    &--fill-bgn-trans {
+        transition-property: background-color, fill;
+        transition-duration: 250ms;
+        transition-timing-function: $trans-timing;
+    }
+}

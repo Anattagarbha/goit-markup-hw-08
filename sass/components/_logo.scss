@@ -1,0 +1,20 @@
+.logo {
+    display: inline-block;
+    color: $mr-black;
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.19;
+    &--logo-color {
+        color: $brand-color;
+    }
+    &--logo-white {
+        color: $mr-white;
+    }
+    &--header {
+        margin-right: 93px;
+    }
+    &--footer {
+        margin-bottom: 20px;
+    }
+  }

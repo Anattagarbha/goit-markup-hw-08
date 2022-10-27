@@ -1,0 +1,41 @@
+.signup {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 93px;
+    &__wrap {
+        display: flex;
+        gap: 12px;
+    }
+    &__title {
+        @include font(14, 16, 700, 0.03);
+        text-transform: uppercase;
+        color: $mr-white;
+        margin-bottom: 20px;
+    }
+    &__input {
+        width: 358px;
+        color: $input-text-color;
+        background-color: inherit;
+        outline: transparent;
+        border: 1px solid $input-bdr-color;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        padding: 15px 16px;
+        transition: border-color 250ms $trans-timing;
+        &::placeholder {
+            color: $input-text-color;
+        }
+        &:focus {
+            border-color: $brand-color;
+        }
+    }
+    &__button {
+        @extend %button;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__icon {
+        fill: $mr-white;
+    }
+}

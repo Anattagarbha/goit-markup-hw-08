@@ -1,0 +1,33 @@
+.clients {
+    &__headline {
+        @extend %headline;
+    }
+    &__list {
+        display: flex;
+        gap: 30px;
+        width: 100%;
+    }
+    &__item {
+        width: calc((100% - 150px + 12px) / 6);
+        display: flex;
+    }
+    &__link {
+        width: calc(100%);
+        height: 92px;
+        border: 1px solid $icon-fill-color;
+        border-radius: 4px;
+        fill: $icon-fill-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover, &focus {
+            fill: $brand-color;
+            border-color: $brand-color;
+        }
+    }
+    &--fill-bdr-trans {
+        transition-property: border-color, fill;
+        transition-duration: 250ms;
+        transition-timing-function: $trans-timing;
+    }
+}  

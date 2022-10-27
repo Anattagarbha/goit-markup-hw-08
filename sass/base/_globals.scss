@@ -1,0 +1,12 @@
+body {
+    background-color: $bgn-color;
+    color: $font-color;
+    font-family: $font-primary;
+    letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

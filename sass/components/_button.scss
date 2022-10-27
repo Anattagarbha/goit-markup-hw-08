@@ -1,0 +1,17 @@
+%button {
+    @include font(16, 30, 700, 0.06);
+    background-color: $brand-color;
+    border: 1px solid $brand-color;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px $hero-btn-shadow;
+    color: $mr-white;
+    min-width: 216px;
+    min-height: 50px;
+    padding: 10px 32px;
+    text-align: center;
+    cursor: pointer;
+    &:active {
+        background-color: $active-color;
+        border-color: $active-color;
+    }
+}

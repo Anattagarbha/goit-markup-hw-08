@@ -1,0 +1,15 @@
+%description {
+    @include font(18, 28, 400, 0.03);
+    position: absolute;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: calc(100% + 1px);
+    color: $mr-white;
+    padding: 63px 24px;
+    background-color: $prj-bgn-color;
+    transform: translateY(100%);
+    transition-duration: 250ms;
+    transition-timing-function: $trans-timing;
+}

@@ -1,0 +1,63 @@
+.portfolio {
+    &__filter-button {
+        @extend %button-portfolio;
+        &:hover, &:focus, &:active {
+            background-color: $brand-color;
+            border-color: $brand-color;
+            color: $mr-white;
+            box-shadow: 0px 3px 1px $multi-shadow-d,
+            0px 1px 2px $multi-shadow-e, 
+            0px 2px 2px $multi-shadow-f;
+        }
+    }
+    &__filter {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        gap: 8px;
+    }
+    &__projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    &__project-item {
+        width: calc((100% - 60px) / 3);
+    }
+    &__project-info {
+        border: 1px solid $border-color;
+        border-top-width: 0;
+        border-top-style: hidden;
+        padding: 20px 24px;
+    }
+    &__project-name {
+        @include font(18, 36, 700, 0.06);
+        color: $font-color;
+        margin-bottom: 4px;
+    }
+    &__project-function {
+        @include font(16, 30, 400, 0.03);
+        color: $small-text;
+    }
+    &__project-link {
+        display: block;
+        &:hover {
+            box-shadow: 0px 4px 4px $project-box-shadow; 
+        }
+    }
+    &--shadow-trans {
+        transition-property: box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: $trans-timing;
+    }
+    &__project-wrap {
+        position: relative;
+        overflow: hidden;
+    }
+    &__project-description {
+        @extend %description;
+    }
+    &__project-link:hover &__project-description {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,27 @@
+.skills {
+    &__headline {
+        @extend %headline;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    &__item {
+        position: relative;
+    }
+    &__function {
+        @include font(14, 60, 700, 0.03);
+        text-transform: uppercase;
+        position: absolute;
+        margin-bottom: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: $mr-white;
+        min-height: 70px;
+        background: $func-bgn-color;
+    }
+}

@@ -1,0 +1,69 @@
+.footer {
+    background-color: $third-bgn-color;
+    padding: 60px 0;
+    > .container {
+        display: flex;
+        align-items: baseline;
+    }
+    &__address-link {
+        @include font(14, 24, 400, 0.03);
+        font-style: normal;
+        color: $address-color;
+        display: inline-block;
+        min-width: 231px;
+        &:hover, &:focus {
+            color: $brand-color;
+        }
+    }
+    &--white-link {
+        color: $mr-white;
+    }
+    &__address-item {
+        &:not(:last-child) {
+            margin-bottom: 9px;
+        }
+    }
+    &--color-trans {
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: $trans-timing;
+    }
+    &__social-menu {
+        display: block;
+        width: 206px;
+        margin-left: 70px;
+    }
+    &__social-headline {
+        @include font (14, 16, 700, 0.03);
+        text-transform: uppercase;
+        color: $mr-white;
+        margin-bottom: 20px;
+    }
+    &__social-list {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    &__social-icon {
+        width: 20px;
+        height: 20px;
+    }
+    &__social-link {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: $social-bgn-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        fill: $mr-white;
+        &:hover, &:focus {
+            background-color: $brand-color;
+        }
+    }
+    &--bgn-trans {
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: $trans-timing;
+    }
+}
