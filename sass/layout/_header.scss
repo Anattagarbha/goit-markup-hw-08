@@ -101,15 +101,15 @@
         }    
     }
     &__link {
+        @include font(12, 14, 500, 0.02);
         display: flex;
         align-items: center;
         color: $small-text;
-        font-weight: 500;
-        letter-spacing: 0.02em;
-        line-height: 1.14;
-        font-size: 14px;
         &:hover, &:focus {
             color: $brand-color;
+        }
+        @include desktop {
+            @include font(14, 16, 500, 0.02);
         }
     }
     &--color-trans {
