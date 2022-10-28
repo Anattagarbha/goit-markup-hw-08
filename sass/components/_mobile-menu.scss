@@ -91,7 +91,6 @@
     }
     &__social-list {
         display: flex;
-        gap: 5px;
     }
     &__social-item {
         &:not(:last-child) {
@@ -99,9 +98,8 @@
             border-right: 1px solid rgba(33, 33, 33, 0.2);
         }
         &:not(:first-child) {
-            padding-left: 4px;
-        }
-        
+            padding-left: 10px;
+        }   
     }
     &__social-link {
         @include font(18, 22, 500, 0.02);
